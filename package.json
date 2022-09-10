@@ -1,0 +1,45 @@
+{
+  "name": "dvm-readit",
+  "version": "1.0.0",
+  "description": "Master Electron Project Code",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "watch": "nodemon --exec electron .",
+    "reset": "git reset --hard",
+    "build": "electron-builder -w",
+    "win-cert": "electron-builder create-self-signed-cert -p dvm-eip"
+  },
+  "repository": "https://github.com/stackacademytv/master-electron",
+  "homepage": "https://github.com/dmacisso/dmacisso",
+  "keywords": [
+    "Electron",
+    "Master Electron",
+    "demo"
+  ],
+  "author": "dmacisso",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^9.0.0",
+    "electron-builder": "^23.3.3",
+    "nodemon": "^2.0.0"
+  },
+  "dependencies": {
+    "electron-window-state": "^5.0.3"
+  },
+  "build": {
+    "appId": "com.macissobros.dvm-readit",
+    "copyright": "Copyright (c) dvm-eip",
+    "mac": {
+      "category": "public.app-category.productivity",
+      "target": "dmg"
+    },
+    "win": {
+      "certificateFile": "private/dvm-eip.pfx",
+      "certificatePassword": "",
+      "verifyUpdateCodeSignature": false,
+      "publisherName": "dvm-eip"
+    }
+   
+  }
+}
