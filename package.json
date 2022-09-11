@@ -10,7 +10,7 @@
     "build": "electron-builder -w",
     "win-cert": "electron-builder create-self-signed-cert -p dvm-eip"
   },
-  "repository": "https://github.com/stackacademytv/master-electron",
+  "repository": "https://github.com/dmacisso/readit-dvm",
   "homepage": "https://github.com/dmacisso/dmacisso",
   "keywords": [
     "Electron",
