@@ -14,40 +14,37 @@ module.exports = (appWin) => {
           accelerator: 'CmdOrCtrl+o',
           click: () => {
             // appWin is a reference to mainWindow.webContents called from main.js
-            appWin.send('menu-show-modal') // ipc channel name 
-          }
+            appWin.send('menu-show-modal'); // ipc channel name
+          },
         },
         {
           label: 'Read Item',
           accelerator: 'CmdOrCtrl+Enter',
           click: () => {
-            appWin.send('menu-open-item') // ipc channel name 
-          }
+            appWin.send('menu-open-item'); // ipc channel name
+          },
         },
         {
           label: 'Delete Item',
           accelerator: 'CmdOrCtrl+Backspace',
           click: () => {
-            appWin.send('menu-delete-item') // ipc channel name 
-          }
+            appWin.send('menu-delete-item'); // ipc channel name
+          },
         },
         {
           label: 'Open in Browser',
           accelerator: 'CmdOrCtrl+Shift+Enter',
           click: () => {
-            appWin.send('menu-open-item-native') // ipc channel name 
-          }
-
+            appWin.send('menu-open-item-native'); // ipc channel name
+          },
         },
         {
           label: 'Search Items',
           accelerator: 'CmdOrCtrl+s',
           click: () => {
-            appWin.send('menu-focus-search') // ipc channel name 
-          }
-
-        }
-      
+            appWin.send('menu-focus-search'); // ipc channel name
+          },
+        },
       ],
     },
     {
@@ -65,6 +62,12 @@ module.exports = (appWin) => {
             shell.openExternal(
               'https://github.com/stackacademytv/master-electron'
             );
+          },
+        },
+        {
+          label: 'Source Code',
+          click: () => {
+            shell.openExternal('https://github.com/dmacisso/readit-dvm');
           },
         },
       ],
